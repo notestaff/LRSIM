@@ -48,7 +48,7 @@ all: SURVIVOR
 SURVIVOR: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: Cross G++ Linker'
-	g++  -o "SURVIVOR" $(OBJS) $(USER_OBJS) $(LIBS)
+	${CXX} ${CXXFLAGS}  -o "SURVIVOR" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 

@@ -1,6 +1,6 @@
 set -e
 
-g++ extractReads.cpp -O3 -o extractReads
+${CXX} extractReads.cpp -O3 -o extractReads
 
 cd DWGSIMSrc
 make -j
@@ -9,7 +9,7 @@ cp -f ./samtools/samtools ../
 cd ../
 
 cd msortSrc
-g++ msort.c sort_funs.c stdhashc.cc -lm -m64 -fpermissive -o msort
+${CXX} msort.c sort_funs.c stdhashc.cc -lm -m64 -fpermissive -o msort
 cp -f msort ../
 cd ../
 
