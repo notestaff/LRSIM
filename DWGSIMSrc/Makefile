@@ -35,10 +35,10 @@ all:$(PROG)
 .PHONY:all-recur lib-recur clean-recur cleanlocal-recur install-recur
 
 dwgsim:lib-recur $(DWGSIM_AOBJS)
-	$(CC) $(CFLAGS) -o $@ $(DWGSIM_AOBJS) -lm -lz -lpthread
+	$(CC) $(CFLAGS) -o $@ $(DWGSIM_AOBJS) $(LDFLAGS) -lm -lz -lpthread
 
 dwgsim_eval:lib-recur $(DWGSIM_EVAL_AOBJS)
-	$(CC) $(CFLAGS) -o $@ $(DWGSIM_EVAL_AOBJS) -Lsamtools -lm -lz -lpthread
+	$(CC) $(CFLAGS) -o $@ $(DWGSIM_EVAL_AOBJS) $(LDFLAGS) -Lsamtools -lm -lz -lpthread
 
 cleanlocal:
 		rm -vfr gmon.out *.o a.out *.exe *.dSYM razip bgzip $(PROG) *~ *.a *.so.* *.so *.dylib; \
