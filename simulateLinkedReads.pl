@@ -1,4 +1,4 @@
-#!/usr/bin/perl
+#!/usr/bin/env perl
 
 # The MIT License (MIT)
 # Copyright (c) 2016 Ruibang Luo <aquaskyline@gmail.com>
